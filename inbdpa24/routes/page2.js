@@ -6,6 +6,17 @@ router.get('/', function(req, res, next) {
   res.render('page2', { title: 'BDPA Page 2' });
 });
 
-module.exports = router;
+// POST registration page
+router.post('/', function(req, res, next) {
+  res.render('postregister',
+  { 
+    title: 'Post Registration',
+    username: req
+    email: 'Email goes here',
+    salt: 'salt goes here',
+    key: 'key goes here'
+  }
+  )
+});
 
-// COMMENT HERE
+module.exports = router;
